@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  
+  max-width: 1600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* for top navigation*/
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover .dropdown:hover .dropbtn{
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #D4D4D4;
+  color: white;
+}
+
+/* dropdown*/
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Fade in overlay */
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family:'Bradley Hand ITC';
+}
+
+.Background2 {
+  
+  max-width: 1600px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Fade in overlay */
+.containerStory {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  }
+  
+ .overlayStory {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.containerStory:hover .overlayStory {
+  opacity: 1;
+}
+
+.textStory {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family:'Bradley Hand ITC';
+}
+ 
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+footer{ background:black; }
+
+
+
+/* Fade in overlay */
+.containerimage {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  }
+  
+ .overlayimage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.containerimage :hover .overlayimage  {
+  opacity: 1;
+}
+
+.textimage  {
+  color: Red;
+  font-size: 70px;
+  position: absolute;
+  top: 38%;
+  left: 39%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family:'Bradley Hand ITC';
+}
+
+
+
+.socicons-list {
+ list-style: none;
+ display: flex;
+ justify-content: center;
+}
+.socicons-list li {
+ margin: 30px 10px;
+}
+.socicons-list li a {
+ text-decoration: none;
+ padding: 30px;
+ font-size: 30px;
+ border-radius: 50%;
+ color: #fff;
+ background-color: #f1f1f1;
+ transition: all ease-in-out 150ms;
+}
+.socicons-list li a:hover {
+ text-shadow: 0 5px 10px #212121;
+}
+.socicons-list li:nth-child(1) a {
+ background-color: #3e5b98;
+}
+.socicons-list li:nth-child(2) a {
+ background-color: #c13584;
+}
+.socicons-list li:nth-child(3) a {
+ background-color: #4da7de;
+}
+
+
+.Application {
+ text-align: center;
+}
+
+
+
+
+
+</style>
+</head>
+
+
+
+<div>           
+        <table style="background:url('Pictures/Background.jpg'); background-size:cover; border:solid 2px; border-collapse:collapse; width:100%; height:300px" border="0" class="auto-style2">
+          <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style1">  <img src="Pictures/Logo.jpg" width="300" height="300" alt="Logo"></td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+</div>
+      
+      
+
+
+
+<body>
+
+<div class="topnav">
+
+  <a href="About Us.html">About Us</a>
+  <a href="Contact.html">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">What We Serve 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Drink.html">Drink</a>
+      <a href="Desserts.html">Dessert</a>
+      <a href="Food&Salad.html">Food&Salad</a>
+      <a href="Special.html">Special</a>
+    
+    </div>
+  </div> 
+  <a class="active" href="#home">Home</a>
+  
+  </div>
+
+</br>
+
+      <h1 style="font-family:'Bradley Hand ITC'; text-align: center;color: white;font-size: 50px;""><b><strong><p><font color="White">Life is a journey, full of pictures, places, stories and good tasting recipes.&nbsp;</strong></b></h1></font></p>         
+   
+   
+
+
+<div class="slideshow-container">
+  
+  <div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="Pictures/32.jpg" style="width:1550px; height:500px; ">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="Pictures/37.jpg" style="width:1550px; height:500px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="Pictures/34.jpg" style="width:1550px; height:500px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="Pictures/53.jpg" style="width:1550px; height:500px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="Pictures/51.jpg" style="width:1550px; height:500px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="Pictures/35.jpg" style="width:1550px; height:500px;">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</br>
+</br>
+</br>
+</br>
+
+
+<h1 style="font-family:'Bradley Hand ITC'; text-align: center;color: white;font-size: 80px;"><b><strong><p><font color="White">Menu&nbsp;</strong></b></h1></font></p>
+
+
+
+<div class="Background2"> 
+<div style="width:100%; margin:0 auto; text-align:center;">
+   
+        <table style="background:url('Pictures/Background 3.jpg'); background-size:cover; border:solid 2px; border-collapse:collapse; width:100%; height:500px" border="0" class="auto-style2">
+          <tr>
+          <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </td>
+            <td class="auto-style3">
+            <div class="container">
+            <a href="Drink.html">
+            
+            <img src="Pictures/19.jpg" width="300" height="300"align="middle" alt="Logo">
+       		<div class="overlay">
+    					<div class="text">Drinks</div>
+  					</div>
+                    </a>
+            </div>
+            </td>
+            
+            
+          
+      
+            <td class="auto-style1">
+            <div class="container">
+            <a href="Food&Salad.html">
+            
+            <img src="Pictures/27.jpg" width="300" height="300"align="middle" alt="Logo">
+            <div class="overlay">
+                        <div class="text">Food&Salad</div>
+  					</div>
+                        </div>
+                        </a>
+            </div>
+            </td>
+         
+         
+         
+           <td class="auto-style1"> 
+           <div class="container">
+           <a href="Desserts.html">
+            
+           <img src="Pictures/12.jpg" width="300" height="300"align="middle" alt="Logo">
+           <div class="overlay">
+                        <div class="text">Desserts</div>
+  					</div>
+                        </div>
+                        </a>
+           </div>
+           </td>
+       
+          </tr>
+          
+        </table>
+</div>
+</div>
+<br/>
+<br/>
+
+<h1 style="font-family:'Bradley Hand ITC'; text-align: center;color: white;font-size: 80px;">SPECIALS</strong></b></h1> 
+
+
+
+
+<div class="Background2"> 
+<div style="width:100%; margin:0 auto; text-align:center;">
+   
+        <table style="background:url('Pictures/Background 3.jpg'); background-size:cover; border:solid 2px; border-collapse:collapse; width:100%; height:500px" border="0" class="auto-style2">
+          <tr>
+          <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          </td>
+            <td class="auto-style3">
+            <div class="container">
+            <a href="HK Minced Chicken Porridge.html">
+            
+            	<img src="Pictures/7.jpg" width="300" height="300"align="middle" alt="Logo">
+       		<div class="overlay">
+    					<div class="text">HK Minced Chicken Porridge</div>
+  					</div>
+                    </a>
+            </div>
+            </td>
+            
+            
+          
+      
+            <td class="auto-style1">
+            <div class="container">
+            <a href="Pan-seared chicken with potatoes.html">
+            
+            <img src="Pictures/18.jpg" width="300" height="300"align="middle" alt="Logo">
+            <div class="overlay">
+                        <div class="text">Pan-seared chicken with potatoes</div>
+  					</div>
+                        </div>
+                        </a>
+            </div>
+            </td>
+         
+         
+         
+            <td class="auto-style1"> 
+            <div class="container">
+            <a href="Big Ben.html">
+            
+            <img src="Pictures/17.jpg" width="300" height="300"align="middle" alt="Logo">
+            <div class="overlay">
+                        <div class="text">Big Ben</div>
+  					</div>
+                        </div>
+                        </a>
+            </div>
+            </td>
+         
+            
+          </tr>
+        </table>
+</div>
+</div>
+
+<br/>
+<br/> 
+<br/>
+
+
+<h1 style="font-family:'Bradley Hand ITC'; text-align: center;color: white;font-size: 80px;">Our Barista</strong></b></h1> 
+
+  
+  <div class="Background2"> 
+<div style="width:100%; margin:0 auto; text-align:center;">
+   
+        <table style="background:url('Pictures/Background 3.jpg'); background-size:cover; border:solid 2px; border-collapse:collapse; width:100%; height:500px" border="0" class="auto-style2">
+          <tr>
+          <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+          </td>
+        
+            <td class="auto-style1"> 
+            <div class="containerStory">
+            <a href="default.asp">
+            <img src="Pictures/89.jpg" width="450" height="450"align="middle" alt="Logo">
+            <div class="overlayStory">
+                        <div class="textStory">Charles Lee</div>
+  					</div>
+                        </div>
+                        </a>
+            </div>
+            </td>
+      
+      
+       
+<td>
+
+<h1 style="font-family:'Bradley Hand ITC'; text-align: Left;font-size: 40px;"><b><strong><p><font color="White">
+“I wanted to do something great that would affect people in a positive way. I wanted to have an impact on an entire community that would be unforgettable. Looking back, I believe that we did.”
+<br/>
+
+</h1>
+</td>
+       
+       
+       
+          </tr>
+          
+        </table>
+</div>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<footer><table style="color: black;">
+          <tr>
+          <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </td>
+            <td class="auto-style3">
+            <div class="containerimage">
+            <a href="default.asp">
+            <br/>
+            <img src="Pictures/Logo.jpg" width="350" height="350"align="middle" alt="Logo">
+       		<div class="overlayimage">
+    					<div class="textimage">FROTH cafe</div>
+  					
+                   
+                    </div>
+                    </a>
+           
+           </div>
+           </td>
+                   <td>
+                   <h1 style="font-family:'Bradley Hand ITC'; text-align: Left;"><b><strong><p><font color="White">
+                   Froth Cafe Subang Jaya
+                    
+                    
+                   <P style="font-family:'Bradley Hand ITC'; text-align: Left;">Location : The Summit Shopping Complex                    </P>
+                    
+                    
+                   <P style="font-family:'Bradley Hand ITC'; text-align: Left;">Tel:03-8601 8410 </P>
+                                    
+                   
+                   <P style="font-family:'Bradley Hand ITC'; text-align: Left;">Opening Hours 10:00 AM - 5:00 PM </P>
+                   
+                     
+                   <P style="font-family:'Bradley Hand ITC'; text-align: Left;">© Copyright Froth Cafe Subang Jaya All Rights Reserved</P>
+                   
+                   </strong></b>
+                   </h1>
+                    
+                   </td>
+            </tr>
+  
+<br/>
+
+
+   <tr>         
+<div class="Application">
+<div style="width:100%; margin:0 auto; text-align:center;">
+<link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?rd5re8">       
+<ul class="socicons-list">
+    <li>
+      <a href='your_url_here' target='_blank'><span class="socicon-facebook"></span></a> 
+    </li>
+      <li>
+      <a href='your_url_here' target='_blank'><span class="socicon-instagram"></span></a> 
+    </li> 
+    <li>
+      <a href='your_url_here' target='_blank'><span class="socicon-twitter"></span></a> 
+    </li>
+            
+     </div>        
+      </tr> 
+      
+      
+      </table>     
+      </footer>
+ 
+  
+<td>
+<body background="Pictures/k5.jpg"
+</td>
+ 
+      
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
